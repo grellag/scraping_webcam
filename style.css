@@ -1,24 +1,8 @@
   body {
-    background-color: #242f44;
+    background-color: silver;
     color: black;
     font-family: 'Georgia', sans-serif;
   }
-  
-  .navbar {
-    background-color: pink;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  .navbar li {
-    display: inline-block;
-    padding: 0 20px;
-  }
-
-  .navbar a {
-    text-decoration: none;
-  } 
 
   header {
     text-align: center;
@@ -104,17 +88,8 @@
     color: black;
   }
 
-  .image {
-    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg");
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-  }
-
-
   .carousel-inner{
     width:100%;
     display: flex;
     justify-content: center; 
-    max-height: 400x !important;
   }
