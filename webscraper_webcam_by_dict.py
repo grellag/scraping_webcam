@@ -178,39 +178,43 @@ def blob_metadata(project_id, bucket_name, blob_name):
     # Retrieve a blob, and its metadata, from Google Cloud Storage.
     # Note that `get_blob` differs from `Bucket.blob`, which does not
     # make an HTTP request.
-    blob = bucket.get_blob(blob_name)
-
-    print(f"Blob: {blob.name}")
-    print(f"Bucket: {blob.bucket.name}")
-    print(f"Storage class: {blob.storage_class}")
-    print(f"ID: {blob.id}")
-    print(f"Size: {blob.size} bytes")
-    print(f"Updated: {blob.updated}")
-    print(f"Generation: {blob.generation}")
-    print(f"Metageneration: {blob.metageneration}")
-    print(f"Etag: {blob.etag}")
-    print(f"Owner: {blob.owner}")
-    print(f"Component count: {blob.component_count}")
-    print(f"Crc32c: {blob.crc32c}")
-    print(f"md5_hash: {blob.md5_hash}")
-    print(f"Cache-control: {blob.cache_control}")
-    print(f"Content-type: {blob.content_type}")
-    print(f"Content-disposition: {blob.content_disposition}")
-    print(f"Content-encoding: {blob.content_encoding}")
-    print(f"Content-language: {blob.content_language}")
-    print(f"Metadata: {blob.metadata}")
-    print(f"Medialink: {blob.media_link}")
-    print(f"Custom Time: {blob.custom_time}")
-    print("Temporary hold: ", "enabled" if blob.temporary_hold else "disabled")
-    print(
-        "Event based hold: ",
-        "enabled" if blob.event_based_hold else "disabled",
-    )
-    if blob.retention_expiration_time:
+    try:
+        blob = bucket.get_blob(blob_name)
+        print(f"Blob: {blob.name}")
+        print(f"Bucket: {blob.bucket.name}")
+        print(f"Storage class: {blob.storage_class}")
+        print(f"ID: {blob.id}")
+        print(f"Size: {blob.size} bytes")
+        print(f"Updated: {blob.updated}")
+        print(f"Generation: {blob.generation}")
+        print(f"Metageneration: {blob.metageneration}")
+        print(f"Etag: {blob.etag}")
+        print(f"Owner: {blob.owner}")
+        print(f"Component count: {blob.component_count}")
+        print(f"Crc32c: {blob.crc32c}")
+        print(f"md5_hash: {blob.md5_hash}")
+        print(f"Cache-control: {blob.cache_control}")
+        print(f"Content-type: {blob.content_type}")
+        print(f"Content-disposition: {blob.content_disposition}")
+        print(f"Content-encoding: {blob.content_encoding}")
+        print(f"Content-language: {blob.content_language}")
+        print(f"Metadata: {blob.metadata}")
+        print(f"Medialink: {blob.media_link}")
+        print(f"Custom Time: {blob.custom_time}")
+        print("Temporary hold: ", "enabled" if blob.temporary_hold else "disabled")
         print(
-            f"retentionExpirationTime: {blob.retention_expiration_time}"
+            "Event based hold: ",
+            "enabled" if blob.event_based_hold else "disabled",
         )
-    return blob.name
+        if blob.retention_expiration_time:
+            print(
+                f"retentionExpirationTime: {blob.retention_expiration_time}"
+            )
+    except:
+        log.debug(f'Non trovato nessun BLOG con nome: {blob_name} in {project_id}/{bucket_name}')
+        blob_name = "None"
+
+    return blob_name
 
 def delete_blob(project_id, bucket_name, blob_name):
     """Deletes a blob from the bucket."""
@@ -226,7 +230,7 @@ def upload_blob_from_memory(project_id, bucket_name, contents, destination_blob_
     blob            = bucket.blob(destination_blob_name)
     """Check if exists"""
     ret_id = blob_metadata(project_id, bucket_name, destination_blob_name)
-    if ret_id != None:
+    if ret_id != 'None':
         delete_blob(project_id, bucket_name, destination_blob_name)
         log.debug(f'Deleted {blob.name} in {bucket.name}')
     if Type == "image":
@@ -262,6 +266,7 @@ def set_bucket_public_iam(project_id,
 
 if __name__ == "__main__":
     log = logger.logger.setup_applevel_logger(file_name = 'app_webcam_debug.log')
+    bucket_name = "www.giorgiogrella.net"
     Dict_n = { 
 
 
@@ -332,7 +337,7 @@ if __name__ == "__main__":
                 print(destination_path)
                 move_last_file(source, destination_path, new_filename )
                 #####################################################################
-                upload_blob_from_memory("grellag-python", "grellag-bucket", download_file, new_filename, "image")
+                upload_blob_from_memory("grellag-python", bucket_name, download_file, new_filename, "image")
                 #####################################################################
                 #move_last_file(source, source, new_filename )
 
@@ -355,8 +360,8 @@ if __name__ == "__main__":
     html_output = "https://www.giorgiogrella.net/home/webcam"
     os.startfile(html_output)
 
-    upload_blob_from_memory("grellag-python", "grellag-bucket", destination + "\\" + latest_file, "index.hml", "text")
-    set_bucket_public_iam("grellag-python", "grellag-bucket")
+    #upload_blob_from_memory("grellag-python", bucket_name, destination + "\\" + latest_file, "index.hml", "text")
+    set_bucket_public_iam("grellag-python", bucket_name)
     #time.sleep(5) # Sleep for 3 seconds
 
     log.debug(f'Aggiornato HTML con: {html_output}')
