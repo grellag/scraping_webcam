@@ -9083,3 +9083,34 @@
 2022-12-24 00:51:03,760 - Webscraper - DEBUG - Aggiornato HTML con immagine: <img src='https://storage.googleapis.com/grellag-bucket/Loco_ultima.jpg' width='50%'/>
 2022-12-24 00:51:08,109 - Webscraper - DEBUG - Aggiornato HTML con: https://www.giorgiogrella.net/home/webcam
 2022-12-24 00:51:08,110 - Webscraper - DEBUG - Done html file
+2022-12-24 01:00:06,656 - Webscraper - DEBUG - Found Download folder downloads
+2022-12-24 01:00:07,836 - Webscraper - DEBUG - End webscraper: https://www.eraimperia.it/webcam-ir1dd.php
+2022-12-24 01:00:07,837 - Webscraper - DEBUG - move_last_file - Rimosso file: PizzoOrmea_ultima.jpg in C:\Users\giorg\OneDrive\Immagini\webcam\\PizzoOrmea
+2022-12-24 01:00:09,076 - Webscraper - DEBUG - move_last_file - Copiato file: C:\Logs\\\PizzoOrmea\P22122323535310.jpg in C:\Users\giorg\OneDrive\Immagini\webcam\\PizzoOrmea
+2022-12-24 01:00:18,010 - Webscraper - DEBUG - Deleted PizzoOrmea_ultima.jpg in www.giorgiogrella.net
+2022-12-24 01:00:21,861 - Webscraper - DEBUG - Saved PizzoOrmea_ultima.jpg in www.giorgiogrella.net
+2022-12-24 01:00:21,862 - Webscraper - DEBUG - Aggiornato HTML con immagine: <img src='https://storage.cloud.google.com/grellag-bucket/PizzoOrmea_ultima.jpg' width='50%'/>
+2022-12-24 01:00:22,178 - Webscraper - DEBUG - DownFileFromUrl - Found Download folder image.jpg
+2022-12-24 01:00:22,178 - Webscraper - DEBUG - Saved C:\Logs\\\Arenzano\R20221224_010021.jpg
+2022-12-24 01:00:22,178 - Webscraper - DEBUG - End webscraper: http://www.comune.arenzano.ge.it/uploads/images/webcam/rifugio/image.jpg
+2022-12-24 01:00:22,180 - Webscraper - DEBUG - move_last_file - Rimosso file: Arenzano_ultima.jpg in C:\Users\giorg\OneDrive\Immagini\webcam\\Arenzano
+2022-12-24 01:00:23,916 - Webscraper - DEBUG - move_last_file - Copiato file: C:\Logs\\\Arenzano\R20221224_010021.jpg in C:\Users\giorg\OneDrive\Immagini\webcam\\Arenzano
+2022-12-24 01:00:33,169 - Webscraper - DEBUG - Deleted Arenzano_ultima.jpg in www.giorgiogrella.net
+2022-12-24 01:00:36,405 - Webscraper - DEBUG - Saved Arenzano_ultima.jpg in www.giorgiogrella.net
+2022-12-24 01:00:36,406 - Webscraper - DEBUG - Aggiornato HTML con immagine: <img src='https://storage.cloud.google.com/grellag-bucket/Arenzano_ultima.jpg' width='50%'/>
+2022-12-24 01:00:37,228 - Webscraper - DEBUG - DownFileFromUrl - Found Download folder current.jpg
+2022-12-24 01:00:37,229 - Webscraper - DEBUG - Saved C:\Logs\\\Cipolla\R20221224_010036.jpg
+2022-12-24 01:00:37,230 - Webscraper - DEBUG - End webscraper: https://retelimet.centrometeoligure.it/stazioni/meteo-cipolla/webcam/current.jpg
+2022-12-24 01:00:37,232 - Webscraper - DEBUG - move_last_file - Rimosso file: Cipolla_ultima.jpg in C:\Users\giorg\OneDrive\Immagini\webcam\\Cipolla
+2022-12-24 01:00:38,730 - Webscraper - DEBUG - move_last_file - Copiato file: C:\Logs\\\Cipolla\R20221224_010036.jpg in C:\Users\giorg\OneDrive\Immagini\webcam\\Cipolla
+2022-12-24 01:00:51,001 - Webscraper - DEBUG - Deleted Cipolla_ultima.jpg in www.giorgiogrella.net
+2022-12-24 01:00:56,126 - Webscraper - DEBUG - Saved Cipolla_ultima.jpg in www.giorgiogrella.net
+2022-12-24 01:00:56,127 - Webscraper - DEBUG - Aggiornato HTML con immagine: <img src='https://storage.cloud.google.com/grellag-bucket/Cipolla_ultima.jpg' width='50%'/>
+2022-12-24 01:00:56,967 - Webscraper - DEBUG - End webscraper: https://turbolic.limet.cloud/webcanon.html
+2022-12-24 01:00:56,970 - Webscraper - DEBUG - move_last_file - Rimosso file: Loco_ultima.jpg in C:\Users\giorg\OneDrive\Immagini\webcam\\Loco
+2022-12-24 01:00:56,990 - Webscraper - DEBUG - move_last_file - Copiato file: C:\Logs\\\Loco\webcam.jpg in C:\Users\giorg\OneDrive\Immagini\webcam\\Loco
+2022-12-24 01:01:07,488 - Webscraper - DEBUG - Deleted Loco_ultima.jpg in www.giorgiogrella.net
+2022-12-24 01:01:11,301 - Webscraper - DEBUG - Saved Loco_ultima.jpg in www.giorgiogrella.net
+2022-12-24 01:01:11,305 - Webscraper - DEBUG - Aggiornato HTML con immagine: <img src='https://storage.googleapis.com/grellag-bucket/Loco_ultima.jpg' width='50%'/>
+2022-12-24 01:01:16,447 - Webscraper - DEBUG - Aggiornato HTML con: https://www.giorgiogrella.net/home/webcam
+2022-12-24 01:01:16,448 - Webscraper - DEBUG - Done html file
