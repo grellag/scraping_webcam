@@ -24,12 +24,12 @@ body {
   font-size: var(--main-font-size);
   color: var(--text-color);
   background-color: var(--background-color);
-  margin: 0; /* Rimuove il margine per ridurre il bordo grigio */
-  padding: 0; /* Assicura che non ci sia padding */
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-y: hidden; /* Rimuove la barra di scorrimento verticale */
+  overflow-y: hidden;
 }
 
 .container_up {
@@ -78,13 +78,37 @@ body {
 }
 
 .dropdown-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   border: 1px solid var(--primary-color);
   background-color: var(--background-color);
+}
+
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-item {
   background-color: var(--background-color);
   font-family: var(--body-font-family);
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.navbar-toggler-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transform: rotate(90deg);
 }
 
 /* Mid Container */
@@ -122,27 +146,19 @@ main {
 
 .banner h1 {
   padding-top: var(--spacing-medium);
-  font-size: 11rem;
+  font-size: 8rem;
   font-family: var(--heading-font-family);
 }
 
 @media only screen and (max-width: 750px) {
-  .banner {
-    height: 40rem;
-  }
-
   .banner h1 {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 }
 
 @media only screen and (max-width: 530px) {
-  .banner {
-    height: 30rem;
-  }
-
   .banner h1 {
-    font-size: 6rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -165,7 +181,7 @@ main {
   font-size: var(--body-font-size);
   display: flex;
   justify-content: center;
-  align-items: center; /* Centra verticalmente il testo */
+  align-items: center;
   flex-direction: row;
 }
 
@@ -191,12 +207,6 @@ footer .date_current {
 }
 
 footer em {
-  color: #cfcfcf;
+  color: var(--text-color);
   font-family: var(--body-font-family);
-}
-
-@media only screen and (max-width: 750px) {
-  footer {
-    flex-direction: column;
-  }
 }
