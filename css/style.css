@@ -161,36 +161,11 @@ main {
   font-family: var(--body-font-family);
   color: var(--text-color);
   font-size: var(--body-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Cambiato a row per una singola riga */
 }
 
 .footer_content span,
-.footer_content em {
-  display: block;
-  margin: var(--spacing-small) 0;
-}
-
-@media only screen and (max-width: 750px) {
-  .footer_content {
-    font-size: 0.9rem;
-  }
-}
-
-footer .author {
-  color: var(--primary-color);
-  font-family: var(--special-font-family);
-}
-
-footer .date_current {
-  color: var(--primary-color);
-}
-
-footer em {
-  color: #cfcfcf;
-  font-family: var(--body-font-family);
-}
-
-@media only screen and (max-width: 750px) {
-  footer {
-    flex-direction: column;
-  }
-}
+.footer
